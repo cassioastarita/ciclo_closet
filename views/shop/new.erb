@@ -1,0 +1,27 @@
+<h1>Add Item</h1>
+<form action="/shop" method="POST">
+    <label for="">Name:</label>
+    <input type="text" name="name">
+
+    <label for="">Size:</label>
+    <input type="text" name="name">
+
+    <label for="">Brand:</label>
+    <input type="text" name="name">
+
+    <label for="">Image URL:</label>
+    <input type="text" name="image_url">
+
+    <button>Add Item</button>
+</form>
+
+<% shop_items.each do |shop| %>
+    <h2><%= shop['name'] %></h2>
+    <img src="<%= shop['image_url'] %>" alt="">
+    <a href="/shop/<%= shop['id'] %>/edit">Edit</a>
+
+    <form action="/shop/new/<%= shop['id'] %>" method="POST">
+    <input type="hidden" name="_method" value="delete">
+
+    <button>Delete</button>
+<% end %>
