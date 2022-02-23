@@ -1,17 +1,18 @@
-<h1>Edit Item</h1>
-<form action="/shop<%= shop['id'] %>" method="POST">
+<h3>Edit Item</h3>
+
+<form action="/shop/new/<%= shop_id %>" method="POST">
     <input type="hidden" name="_method" value="put">
 
-    <label for="">Name:</label>
+    <label for="">Name: </label>
     <input type="text" name="name">
 
-    <label for="">Size:</label>
-    <input type="text" name="name">
+    <label for="">Size: </label>
+    <input type="text" name="size">
 
-    <label for="">Brand:</label>
-    <input type="text" name="name">
+    <label for="">Brand: </label>
+    <input type="text" name="brand">
 
-    <label for="">Image URL:</label>
+    <label for="">Image URL: </label>
     <input type="text" name="image_url">
   
     <button>Update Item</button>

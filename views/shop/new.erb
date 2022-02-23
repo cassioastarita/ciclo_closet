@@ -1,27 +1,36 @@
-<h1>Add Item</h1>
-<form action="/shop" method="POST">
+<h1>Shop</h1>
+
+<% if logged_in? %>
+<h3>Add Item</h3>
+<form action="/shop/new" method="POST">
     <label for="">Name:</label>
     <input type="text" name="name">
 
     <label for="">Size:</label>
-    <input type="text" name="name">
+    <input type="text" name="size">
 
     <label for="">Brand:</label>
-    <input type="text" name="name">
+    <input type="text" name="brand">
 
     <label for="">Image URL:</label>
     <input type="text" name="image_url">
 
     <button>Add Item</button>
 </form>
+<% end %>
 
 <% shop_items.each do |shop| %>
-    <h2><%= shop['name'] %></h2>
+    <h3><%= shop['name'] %></h3>
+    <p>Size: <%= shop['size'] %></p>
+    <p>Brand: <%= shop['brand'] %></p>
     <img src="<%= shop['image_url'] %>" alt="">
-    <a href="/shop/<%= shop['id'] %>/edit">Edit</a>
 
+    <% if logged_in? %> 
+    <a href="/edit_shop/<%= shop['id'] %>">Edit</a>
+    
     <form action="/shop/new/<%= shop['id'] %>" method="POST">
     <input type="hidden" name="_method" value="delete">
 
     <button>Delete</button>
+    <% end %>
 <% end %>

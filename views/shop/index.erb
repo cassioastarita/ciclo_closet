@@ -1,12 +1,16 @@
-<h1>Ciclo Closet</h1>
-<a href="/sign_up">Sign up</a>
+<img src="images/logo.jpg" alt="" class="logo"/>
 
-<% if !logged_in? %>
-    <a href="/login">Login</a>
+<nav>
+  <ul class="menu">
+    <li><a href="/about">About</a></li>
+    <li><a href="/shop/new">Shop</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <% if !logged_in? %>
+    <li><a href="/sign_up">Sign up</a></li>
+    <li><a href="/login">Login</a></li>
 <% end %>
-
-<a href="/shop/new">Shop</a>
-<a href="">Blog</a>
+  </ul>
+</nav>
 
 <% if logged_in? %>
   <h3>Welcome to Ciclo Closet <%= current_user()['first_name'] %></h3>
@@ -17,5 +21,15 @@
   </form>
 <% end %>
 
+<main>
+  <h3>About: </h3>
+  <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
 
+  <h3>Purpose: </h3>
+  <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+</main>
+
+<footer>
+  <a href="https://www.instagram.com/ciclo_closet/" target="_blank" class="contact">@ciclo_closet</a>
+</footer>
 
