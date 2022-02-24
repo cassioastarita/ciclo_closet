@@ -1,35 +1,38 @@
 <img src="images/logo.jpg" alt="" class="logo"/>
 
 <nav>
-  <ul class="menu">
-    <li><a href="/about">About</a></li>
-    <li><a href="/shop/new">Shop</a></li>
-    <li><a href="/blog">Blog</a></li>
+  <ul class="">
+    <li><a href="/" class="menu">Home</a></li>
+    <li><a href="/about" class="menu">About</a></li>
+    <li><a href="/shop/new" class="menu">Shop</a></li>
+    <li><a href="/blog" class="menu">Blog</a></li>
     <% if !logged_in? %>
-    <li><a href="/sign_up">Sign up</a></li>
-    <li><a href="/login">Login</a></li>
-<% end %>
+    <li><a href="/sign_up" class="menu">Sign up</a></li>
+    <li><a href="/login" class="menu">Login</a></li>
+    <% end %>
+    <% if logged_in? %>
+    <li><a href="/logout" class="menu">Logout</a></li>
+    <% end %>
   </ul>
 </nav>
 
-<% if logged_in? %>
-  <h3>Welcome to Ciclo Closet <%= current_user()['first_name'] %></h3>
+<h2>Home</h2>
 
-  <form action="/sessions" method="POST">
-    <input type="hidden" name="_method" value="delete">
-    <button>Logout</button>
-  </form>
+<% if logged_in? %>
+  <h2>Welcome to Ciclo Closet <%= current_user()['first_name'] %></h2>
 <% end %>
 
 <main>
-  <h3>About: </h3>
-  <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
-
   <h3>Purpose: </h3>
   <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+  <img src="https://images.unsplash.com/photo-1575939238474-c8ada13b2724?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" alt="">
 </main>
 
 <footer>
-  <a href="https://www.instagram.com/ciclo_closet/" target="_blank" class="contact">@ciclo_closet</a>
+  <a href="https://www.instagram.com/ciclo_closet/" target="_blank" class="contact">Contact us: @ciclo_closet</a>
 </footer>
+
+
+
+
 

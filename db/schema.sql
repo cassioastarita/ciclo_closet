@@ -13,3 +13,9 @@ CREATE TABLE shop(
 CREATE TABLE users(id SERIAL PRIMARY KEY, first_name TEXT, last_name TEXT, email TEXT);
 
 ALTER TABLE users ADD COLUMN password_digest TEXT;
+
+ALTER TABLE users ADD COLUMN role TEXT;
+
+UPDATE users SET role = 'ADMIN' WHERE id=1;
+
+UPDATE users SET role = 'USER' WHERE id=2;

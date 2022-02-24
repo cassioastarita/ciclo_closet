@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Dosis:wght@200;500&family=Poiret+One&display=swap');
+
+
 @media only screen and (max-width: 600px) {
     body {
     background-color: lightblue;
@@ -7,20 +10,21 @@
 body {
     background-color: rgb(220,188,228)
     ;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dosis', sans-serif;
     text-align: center;
-    color: rgba(3,90,62,255)
-    ;
+    color: rgba(3,90,62,255);
 }
 
 img {
     width:  500px;
     height: 500px;
+    border: 5px solid rgb(187,133,209);
 }
 
 .logo {
     width:  200px;
     height: 200px;
+    border: none;
 
 }
 
@@ -36,17 +40,27 @@ nav a {
     padding: 10px;
 }
 
+a:hover {
+    background-color: rgb(197,173,208);
+  }
+
 nav ul {
     display: flex;
     justify-content: flex-start;
     font-weight: bold;
+    background-color:rgb(187,133,209);
+    
 }
 
 nav li {
     flex: 1 1 0;
-    font-size: 25px;
-
+    font-size: 20px;
 }
+
+.menu{
+    color: rgba(3,90,62,255);
+}
+
 
 .article-body {
     margin-left: auto;
@@ -57,6 +71,8 @@ nav li {
 button {
     background-color:rgba(3,90,62,255);
     color: white;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 10px;
 }
 
 .contact {
@@ -64,4 +80,33 @@ button {
     font-weight: bold;
     font-size: 25px;
     text-decoration: none;
+}
+
+footer {
+    bottom: 10px;
+    width: 100%;
+}
+
+hr { 
+    border: 1px dashed #000; width: 50%; margin: auto; margin-top: 5%; margin-bottom: 5%; 
+}
+
+main {
+    padding-top: 25px;
+}
+
+.users {
+    display: grid;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+
+.shop_image {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding-top: 100px;    
+    
 }

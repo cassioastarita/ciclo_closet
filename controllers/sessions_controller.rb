@@ -9,14 +9,20 @@ post '/sessions' do
     user = find_user_by_email(email)
 
     if user && BCrypt::Password.new(user['password_digest']) == params['password']
-        session['user_id'] = user['id']
+        session['user'] = user
     
         redirect '/'
     end
 end
 
 delete '/sessions' do
-    session['user_id'] = nil
+    session['user'] = nil
+
+    redirect '/'
+end
+
+get '/logout' do
+    session['user'] = nil
 
     redirect '/'
 end

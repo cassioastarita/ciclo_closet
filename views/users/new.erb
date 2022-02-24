@@ -1,5 +1,23 @@
-<h1>Sign up</h1>
-<form action="/users" method="POST">
+<img src="images/logo.jpg" alt="" class="logo"/>
+
+<nav>
+  <ul class="">
+    <li><a href="/" class="menu">Home</a></li>
+    <li><a href="/about" class="menu">About</a></li>
+    <li><a href="/shop/new" class="menu">Shop</a></li>
+    <li><a href="/blog" class="menu">Blog</a></li>
+    <% if !logged_in? %>
+    <li><a href="/sign_up" class="menu">Sign up</a></li>
+    <li><a href="/login" class="menu">Login</a></li>
+    <% end %>
+    <% if logged_in? %>
+    <li><a href="/logout" class="menu">Logout</a></li>
+    <% end %>
+  </ul>
+</nav>
+
+<h2>Sign up</h2>
+<form class="users" action="/users" method="POST">
   <label for="">First Name:</label>
   <input type="text" name="first_name">
 

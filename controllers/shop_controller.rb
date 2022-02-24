@@ -17,16 +17,17 @@ post '/shop/new' do
     user_id = session["user_id"]
   
     create_item(name, size, brand, image_url, user_id)
-    redirect '/'
+    redirect '/shop/new'
 end
 
 get '/edit_shop/:id' do
     shop_id = params["id"]
-    user_id = session["user_id"]
-    user_shop_items = user_shop_items(user_id)
+    user = session["user"]
+    user_id = user["id"]
+    shop_item = get_item(shop_id)
     erb :'shop/edit', locals: {
-        shop_items: user_shop_items,
-        shop_id: shop_id
+        shop_id: shop_id,
+        shop_item: shop_item
     }
 end
   
@@ -38,14 +39,14 @@ put '/shop/new/:id' do
     image_url = params["image_url"]
   
     update_item(id, name, size, brand, image_url)
-    redirect '/'
+    redirect '/shop/new'
 end
   
 delete '/shop/new/:id' do
     id = params['id']
   
     delete_item(id)
-    redirect '/'
+    redirect '/shop/new'
 end
 
 get '/about' do
@@ -55,3 +56,7 @@ end
 get '/blog' do
     erb :'shop/blog'
 end
+
+get '/shop/buy/' do
+    erb :'shop/buy'
+  end

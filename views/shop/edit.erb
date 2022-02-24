@@ -4,16 +4,16 @@
     <input type="hidden" name="_method" value="put">
 
     <label for="">Name: </label>
-    <input type="text" name="name">
+    <input type="text" name="name" value="<%= shop_item['name'] %>">
 
     <label for="">Size: </label>
-    <input type="text" name="size">
+    <input type="text" name="size" value="<%= shop_item['size'] %>">
 
     <label for="">Brand: </label>
-    <input type="text" name="brand">
+    <input type="text" name="brand" value="<%= shop_item['brand'] %>">
 
     <label for="">Image URL: </label>
-    <input type="text" name="image_url">
+    <input type="text" name="image_url" value="<%= shop_item['image_url'] %>">
   
     <button>Update Item</button>
 </form>

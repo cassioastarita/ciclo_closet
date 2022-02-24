@@ -1,7 +1,61 @@
-<h1>Blog</h1>
+<img src="images/logo.jpg" alt="" class="logo"/>
 
-<h3>Post: </h3>
-<p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+<nav>
+  <ul class="">
+    <li><a href="/" class="menu">Home</a></li>
+    <li><a href="/about" class="menu">About</a></li>
+    <li><a href="/shop/new" class="menu">Shop</a></li>
+    <li><a href="/blog" class="menu">Blog</a></li>
+    <% if !logged_in? %>
+    <li><a href="/sign_up" class="menu">Sign up</a></li>
+    <li><a href="/login" class="menu">Login</a></li>
+    <% end %>
+    <% if logged_in? %>
+    <li><a href="/logout" class="menu">Logout</a></li>
+    <% end %>
+  </ul>
+</nav>
 
-<h3>Post: </h3>
-<p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+<h2>Blog</h2>
+<main>
+    <img src="https://images.unsplash.com/photo-1598335624134-5bceb5de202d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80" alt="">
+
+    <h3>Sustainability</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 25/02/2022</p>
+
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1530&q=80" alt="">
+    <h3>Fashion</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 25/01/2022</p>
+
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1614251056216-f748f76cd228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="">
+    <h3>Style</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 20/12/2021</p>
+
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1614251056798-0a63eda2bb25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+    <h3>Style</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 20/11/2021</p>
+
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1614251055880-ee96e4803393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+    <h3>Style</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 20/10/2021</p>
+
+    <hr>
+
+    <img src="https://images.unsplash.com/photo-1614251056762-19fca947d703?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+    <h3>Style</h3>
+    <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+    <p class="date">date: 07/09/2021</p>
+</main>

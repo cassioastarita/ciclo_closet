@@ -1,7 +1,24 @@
-<h1>About</h1>
+<img src="images/logo.jpg" alt="" class="logo"/>
 
-<h3>About: </h3>
-<p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+<nav>
+  <ul class="">
+    <li><a href="/" class="menu">Home</a></li>
+    <li><a href="/about" class="menu">About</a></li>
+    <li><a href="/shop/new" class="menu">Shop</a></li>
+    <li><a href="/blog" class="menu">Blog</a></li>
+    <% if !logged_in? %>
+    <li><a href="/sign_up" class="menu">Sign up</a></li>
+    <li><a href="/login" class="menu">Login</a></li>
+    <% end %>
+    <% if logged_in? %>
+    <li><a href="/logout" class="menu">Logout</a></li>
+    <% end %>
+  </ul>
+</nav>
 
-<h3>Purpose: </h3>
-<p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+<h2>About</h2>
+
+<main>
+  <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+  <p class="article-body">A brand is a product, service, or concept that is publicly distinguished from other products, services, or concepts so that it can be easily communicated and usually marketed. A brand name is the name of the distinctive product, service, or concept. Branding is the process of creating and disseminating the brand name.</p>
+</main>

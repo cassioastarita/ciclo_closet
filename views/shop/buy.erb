@@ -16,13 +16,17 @@
   </ul>
 </nav>
 
-<h2>Login</h2>
-<form class="users" action="/sessions" method="POST">
-    <label for="">Email:</label>
-    <input type="text" name="email">
+<h3>Checkout</h3>
+<form class="users" action="payment">
+<label for="">Name:</label>
+<input type="text" name="name">
 
-    <label for="">Password:</label>
-    <input type="password" name="password">
+<label for="">Card Number:</label>
+<input type="integer" name="card_number">
 
-    <button>Log in</button>
+<label for="">Card Expiry:</label>
+<input type="integer" name="card_expiry">
+
+<label for="">Card CVV:</label>
+<input type="integer" name="card_cvv">
 </form>
