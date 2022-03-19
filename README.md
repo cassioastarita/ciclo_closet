@@ -33,13 +33,15 @@ Customers are able to buy items in the shop.
 People are also able to comment on the blog.
 Filters in the shop and blog.
 
-##Tech Stack
+## Technologies used
+-Sinatra
 -Ruby
+-Postgresql
 -HTML
 -CSS
--Heroku for deployment of app
--Express web framework
--postgresql for database
+-JavaScript
+-GitHub
+-Heroku
 
 <img width="1471" alt="Screen Shot 2022-03-19 at 2 00 54 pm" src="https://user-images.githubusercontent.com/94272646/159104237-4d295009-9cce-4ff4-a607-628b99a0ce53.png">
 
